@@ -1,0 +1,12 @@
+[
+    "rank(ts_backfill(fnd17_ebitda2ev_ttm, 120))",
+    "rank(ts_delta(ts_backfill(fnd17_grosmgn, 120), 250))",
+    "rank(ts_decay_linear(ts_backfill(fnd17_grosmgn, 120), 120))",
+    "reverse(ts_zscore(ts_backfill(fnd17_ebitda2ev_ttm, 120), 250))",
+    "reverse(rank(ts_std_dev(ts_backfill(fnd17_grosmgn, 120), 250)))",
+    "rank(add(ts_backfill(fnd17_ebitda2ev_ttm, 120), ts_backfill(fnd17_grosmgn, 120)))",
+    "ts_corr(ts_backfill(fnd17_ebitda2ev_ttm, 120), ts_backfill(fnd17_grosmgn, 120), 250)",
+    "hump(rank(ts_delta(ts_backfill(fnd17_aproipt, 120), 120)), 0.05)",
+    "ts_rank(ts_backfill(fnd17_ebitda2ev_ttm, 120), 250)",
+    "ts_zscore(ts_delta(ts_backfill(fnd17_grosmgn, 120), 120), 250)"
+]
